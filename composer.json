@@ -1,0 +1,52 @@
+{
+    "name": "michelmelo/laravel-share",
+    "description": "Optional package for Laravel to generate social share links.",
+    "keywords": [
+        "laravel",
+        "share",
+        "social links",
+        "social share links"
+    ],
+    "homepage": "https://github.com/michelmelo/laravel-share",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michel Melo",
+            "email": "eu@michelmelo.pt",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.4.*",
+        "orchestra/testbench": "~6.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "MichelMelo\\Share\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MichelMelo\\Share\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MichelMelo\\Share\\Providers\\ShareServiceProvider"
+            ],
+            "aliases": {
+                "Share": "MichelMelo\\Share\\ShareFacade"
+            }
+        }
+    }
+}
